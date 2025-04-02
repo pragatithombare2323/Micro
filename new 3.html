@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - Sports Shop</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+  /* Basic Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Style for the navigation container */
+  nav {
+    display: flex;
+    justify-content: center; /* Center the items horizontally */
+    align-items: center; /* Vertically center the items */
+    background-color: #f8f9fa; /* Light background color */
+    padding: 10px 0; /* Padding around the nav */
+  }
+
+  /* Style for each anchor tag in the nav */
+  nav a {
+    text-decoration: none; /* Remove the underline from links */
+    font-size: 16px; /* Set a font size */
+    font-weight: 600; /* Make the text bold */
+    color: #007bff; /* Blue color for the links */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+  }
+
+  /* Add space between links */
+  nav a:not(:last-child) {
+    margin-right: 20px; /* Adds space between the links */
+  }
+
+  /* Hover effect on links */
+  nav a:hover {
+    color: #0056b3; /* Darker blue when hovered */
+  }
+
+  /* Optional: Add focus styles for accessibility */
+  nav a:focus {
+    outline: 2px solid #0056b3; /* Blue outline on focus */
+  }
+
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Header Section -->
+  <header class="bg-white shadow p-4 flex justify-between items-center">
+    <h1 class="text-2xl font-bold text-blue-600">🏀 Sports Shop</h1>
+    <nav class="space-x-4">
+      <a href="new 1.html" class="text-blue-600">Home</a>
+      <a href="sports.html" class="text-blue-600">Shop</a>
+      <a href="new 2.html" class="text-blue-600">About</a>
+      <a href="new 3.html" class="text-blue-600">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Contact Section -->
+  <section class="bg-white p-12">
+    <h2 class="text-3xl font-bold text-center mb-6">Contact Us</h2>
+    <p class="text-lg text-center mb-8">We'd love to hear from you! Please fill out the form below to get in touch with us.</p>
+    
+    <div class="max-w-lg mx-auto bg-gray-50 p-8 rounded shadow">
+      <form action="#" method="POST">
+        <!-- Name -->
+        <div class="mb-4">
+          <label for="name" class="block text-lg font-semibold">Name</label>
+          <input type="text" id="name" name="name" required class="w-full px-4 py-2 mt-2 border border-gray-300 rounded" placeholder="Your name">
+        </div>
+
+        <!-- Email -->
+        <div class="mb-4">
+          <label for="email" class="block text-lg font-semibold">Email</label>
+          <input type="email" id="email" name="email" required class="w-full px-4 py-2 mt-2 border border-gray-300 rounded" placeholder="Your email address">
+        </div>
+
+        <!-- Message -->
+        <div class="mb-4">
+          <label for="message" class="block text-lg font-semibold">Message</label>
+          <textarea id="message" name="message" required class="w-full px-4 py-2 mt-2 border border-gray-300 rounded" rows="4" placeholder="Your message..."></textarea>
+        </div>
+
+        <!-- Submit Button -->  
+       <a href="Thankyou.html"class="w-full bg-blue-600 text-white py-3 rounded text-lg font-semibold hover:bg-blue-700 transition">Send Message</a>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="bg-gray-800 text-white p-4 text-center">
+    <p>&copy; 2025 Sports Shop. All rights reserved</p>
+  </footer>
+
+</body>
+</html>

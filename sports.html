@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sports Shop</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body class="bg-gray-100 text-gray-800">
+  <!-- Header -->
+  <header class="bg-white shadow p-4 flex justify-between items-center">
+    <h1 class="text-2xl font-bold">🏀 Sports Shop</h1>
+	<nav style="text-align:center:">
+      <a href="new 1.html" class="text-blue-600">Home</a>
+      <a href="sports.html" class="text-blue-600">Shop</a>
+      <a href="new 2.html" class="text-blue-600">About</a>
+      <a href="new 3.html" class="text-blue-600">Contact</a>
+    </nav>
+    <div class="relative">
+	<button onclick="toggleCart()" class="text-sm bg-blue-600 text-white px-4 py-2 rounded">Cart (<span id="cart-count">0</span>)</button>
+    </div>
+  </header>
+
+  <!-- Product Section -->
+  <main class="p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    <!-- Product 1 -->
+    <div class="bg-white p-4 rounded shadow" data-id="1">
+      <img src="https://th.bing.com/th/id/OIP.hYtDYVTcfFMbUl1BR6dwzQHaE6?w=280&h=186&c=7&r=0&o=5&dpr=1.5&pid=1.7" class="w-full rounded" alt="Running Shoes"/>
+      <h2 class="text-xl font-semibold mt-2">Football</h2>
+      <p class="text-gray-600">$79.99</p>
+      <button onclick="addToCart(1, 'Running Shoes', 79.99)" class="mt-2 bg-green-600 text-white px-4 py-2 rounded w-full">Add to Cart</button>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="bg-white p-4 rounded shadow" data-id="2">
+      <img src="https://cdna.lystit.com/photos/macys/2470266e/mitchell-ness-Blue-Emmitt-Smith-Dallas-Cowboys-Authentic-Football-Jersey.jpeg" class="w-full rounded" alt="Football Jersey"/>
+      <h2 class="text-xl font-semibold mt-2">Football Jersey</h2>
+      <p class="text-gray-600">$49.99</p>
+      <button onclick="addToCart(2, 'Football Jersey', 49.99)" class="mt-2 bg-green-600 text-white px-4 py-2 rounded w-full">Add to Cart</button>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="bg-white p-4 rounded shadow" data-id="3">
+      <img src="https://i5.walmartimages.com/asr/8e33eda3-8982-4c51-9993-cffea55b31b7_3.cba592caf4424c5f68ead86773ca5612.png" class="w-full rounded" alt="Basketball"/>
+      <h2 class="text-xl font-semibold mt-2">Basketball</h2>
+      <p class="text-gray-600">$29.99</p>
+      <button onclick="addToCart(3, 'Basketball', 29.99)" class="mt-2 bg-green-600 text-white px-4 py-2 rounded w-full">Add to Cart</button>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="bg-white p-4 rounded shadow" data-id="4">
+      <img src="https://th.bing.com/th/id/OIP.Qx5dtOsjtDPUqwTxalOhVAAAAA?rs=1&pid=ImgDetMain" class="w-full rounded" alt="Tennis Racket"/>
+      <h2 class="text-xl font-semibold mt-2">Tennis Racket</h2>
+      <p class="text-gray-600">$89.99</p>
+      <button onclick="addToCart(4, 'Tennis Racket', 89.99)" class="mt-2 bg-green-600 text-white px-4 py-2 rounded w-full">Add to Cart</button>
+    </div>
+		
+	
+	
+    <!-- Product 1 -->
+    <div class="bg-white p-4 rounded shadow" data-id="1">
+      <img src="https://cdnb.lystit.com/photos/faf3-2014/01/10/nike-black-mens-air-pegasus-30-running-shoes-from-finish-line-product-1-16669463-0-242155602-normal.jpeg" class="w-full rounded" alt="Running Shoes"/>
+      <h2 class="text-xl font-semibold mt-2">Running Shoes</h2>
+      <p class="text-gray-600">$55.55</p>
+      <button onclick="addToCart(1, 'Running Shoes', 55.55)" class="mt-2 bg-green-600 text-white px-4 py-2 rounded w-full">Add to Cart</button>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="bg-white p-4 rounded shadow" data-id="2">
+      <img src="https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/jyn3ogqow2n4gd2ce0ru/replica-arizona-mens-basketball-jersey-tdT6w8.jpg" class="w-full rounded" alt="Basketball Jersey"/>
+      <h2 class="text-xl font-semibold mt-2">Basketball Jersey</h2>
+      <p class="text-gray-600">$51.99</p>
+      <button onclick="addToCart(2, 'Basketball Jersey', 51.99)" class="mt-2 bg-green-600 text-white px-4 py-2 rounded w-full">Add to Cart</button>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="bg-white p-4 rounded shadow" data-id="3">
+      <img src="https://www.prodirectcricket.com/productimages/Main/Main_Thumb_0366818.jpg" class="w-full rounded" alt="Cricket Bat"/>
+      <h2 class="text-xl font-semibold mt-2">Cricket Bat</h2>
+      <p class="text-gray-600">$45.99</p>
+      <button onclick="addToCart(3, 'Cricket bat', 45.99)" class="mt-2 bg-green-600 text-white px-4 py-2 rounded w-full">Add to Cart</button>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="bg-white p-4 rounded shadow" data-id="4">
+      <img src="https://cdn.shopify.com/s/files/1/0012/8797/9121/products/CDAK17Ball_20Crest_20Elite_20Red_20Back_1500x.jpg?v=1534338411" class="w-full rounded" alt="Cricket Ball"/>
+      <h2 class="text-xl font-semibold mt-2">Cricket Ball</h2>
+      <p class="text-gray-600">$85.99</p>
+      <button onclick="addToCart(4, 'Cricket Ball', 85.99)" class="mt-2 bg-green-600 text-white px-4 py-2 rounded w-full">Add to Cart</button>
+    </div>
+	
+	<!-- Product Section -->
+	
+    <!-- Product 1 -->
+    <div class="bg-white p-4 rounded shadow" data-id="1">
+      <img src="https://th.bing.com/th/id/OIP.FnXjt4iRijY0ck1Y5Fe81QHaHa?rs=1&pid=ImgDetMain" class="w-full rounded" alt="Cricket Gloves"/>
+      <h2 class="text-xl font-semibold mt-2">Cricket Gloves</h2>
+      <p class="text-gray-600">$67.99</p>
+      <button onclick="addToCart(1, 'Cricket Gloves', 67.99)" class="mt-2 bg-green-600 text-white px-4 py-2 rounded w-full">Add to Cart</button>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="bg-white p-4 rounded shadow" data-id="2">
+      <img src="https://th.bing.com/th/id/OIP.6BF35QTAZ5wIjLddau-dOgHaHa?rs=1&pid=ImgDetMain" class="w-full rounded" alt="Cricket Helmet"/>
+      <h2 class="text-xl font-semibold mt-2">Cricket Helmet</h2>
+      <p class="text-gray-600">$51.99</p>
+      <button onclick="addToCart(2, 'Cricket Helmet', 51.99)" class="mt-2 bg-green-600 text-white px-4 py-2 rounded w-full">Add to Cart</button>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="bg-white p-4 rounded shadow" data-id="3">
+      <img src="https://assets.adidas.com/images/w_1880,f_auto,q_auto/72cf52db10e843b796bd20a0346c9eab_9366/IW9429_41_detail.jpg" class="w-full rounded" alt="Cricket Jersey"/>
+      <h2 class="text-xl font-semibold mt-2">Cricket Jersey</h2>
+      <p class="text-gray-600">$56.99</p>
+      <button onclick="addToCart(3, 'Cricket Jersey', 56.99)" class="mt-2 bg-green-600 text-white px-4 py-2 rounded w-full">Add to Cart</button>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="bg-white p-4 rounded shadow" data-id="4">
+      <img src="https://cdn.sweatband.com/yonex_nanoray_3_badminton_racket_ss19_yonex_nanoray_3_badminton_racket_ss19_2000x2000.jpg" class="w-full rounded" alt="Badminton Racket"/>
+      <h2 class="text-xl font-semibold mt-2">Badminton Racket</h2>
+      <p class="text-gray-600">$91.99</p>
+      <button onclick="addToCart(4, 'Badminton Racket', 91.99)" class="mt-2 bg-green-600 text-white px-4 py-2 rounded w-full">Add to Cart</button>
+    </div>
+	
+	<!-- Product 1 -->
+    <div class="bg-white p-4 rounded shadow" data-id="1">
+      <img src="https://cdn.hyvesports.com/wp-content/uploads/2023/03/4-21-1.jpg" class="w-full rounded" alt="Badminton Jersey"/>
+      <h2 class="text-xl font-semibold mt-2">Badminton Jersey</h2>
+      <p class="text-gray-600">$87.99</p>
+      <button onclick="addToCart(1, 'Badminton Jersey', 87.99)" class="mt-2 bg-green-600 text-white px-4 py-2 rounded w-full">Add to Cart</button>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="bg-white p-4 rounded shadow" data-id="2">
+      <img src="https://nwscdn.com/media/wysiwyg/3kf/competition/Competition_grade_shuttlecock_made_with_quality_cork_tip.jpg" class="w-full rounded" alt="Shuttlecock"/>
+      <h2 class="text-xl font-semibold mt-2">Shuttlecock</h2>
+      <p class="text-gray-600">$49.99</p>
+      <button onclick="addToCart(2, 'Shuttlecock', 49.99)" class="mt-2 bg-green-600 text-white px-4 py-2 rounded w-full">Add to Cart</button>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="bg-white p-4 rounded shadow" data-id="3">
+      <img src="https://www.tennisnuts.com/images/product/full/T1062_us-open-ball.jpg" class="w-full rounded" alt="Tennis Ball"/>
+      <h2 class="text-xl font-semibold mt-2">Tennis Ball</h2>
+      <p class="text-gray-600">$29.99</p>
+      <button onclick="addToCart(3, 'Tennis Ball', 29.99)" class="mt-2 bg-green-600 text-white px-4 py-2 rounded w-full">Add to Cart</button>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="bg-white p-4 rounded shadow" data-id="4">
+      <img src="https://hirakraja.com/5176-large_default/dragonfly-table-tennis-board.jpg" class="w-full rounded" alt="Table Tennis Board"/>
+      <h2 class="text-xl font-semibold mt-2">Table Tennis Board</h2>
+      <p class="text-gray-600">$67.99</p>
+      <button onclick="addToCart(4, 'Table Tennis Board', 67.99)" class="mt-2 bg-green-600 text-white px-4 py-2 rounded w-full">Add to Cart</button>
+    </div>
+
+	<!-- Product 1 -->
+    <div class="bg-white p-4 rounded shadow" data-id="1">
+      <img src="https://images.sportsdirect.com/images/imgzoom/86/86200199_xxl.jpg" class="w-full rounded" alt="Hockey Stick"/>
+      <h2 class="text-xl font-semibold mt-2">Hockey Stick</h2>
+      <p class="text-gray-600">$58.99</p>
+      <button onclick="addToCart(1, 'Hocket Stick', 58.99)" class="mt-2 bg-green-600 text-white px-4 py-2 rounded w-full">Add to Cart</button>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="bg-white p-4 rounded shadow" data-id="2">
+      <img src="https://i.pinimg.com/originals/16/f1/f8/16f1f81f018923dac26386430693579c.jpg" class="w-full rounded" alt="Carrom Board"/>
+      <h2 class="text-xl font-semibold mt-2">Carrom Board</h2>
+      <p class="text-gray-600">$64.99</p>
+      <button onclick="addToCart(2, 'Carrom Board', 64.99)" class="mt-2 bg-green-600 text-white px-4 py-2 rounded w-full">Add to Cart</button>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="bg-white p-4 rounded shadow" data-id="3">
+      <img src="https://m.media-amazon.com/images/I/31TZtfw6yxS._SL500_.jpg" class="w-full rounded" alt="Carrom Powder"/>
+      <h2 class="text-xl font-semibold mt-2">Carrom Powder</h2>
+      <p class="text-gray-600">$30.99</p>
+      <button onclick="addToCart(3, 'carrom Powder', 30.99)" class="mt-2 bg-green-600 text-white px-4 py-2 rounded w-full">Add to Cart</button>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="bg-white p-4 rounded shadow" data-id="4">
+      <img src="https://th.bing.com/th/id/R.6a16dded559d924f8bb69eb0ec7a3519?rik=j9CHCdU8W0%2bXLA&riu=http%3a%2f%2fupload.wikimedia.org%2fwikipedia%2fcommons%2f9%2f9c%2fChess_board_with_chess_set_in_opening_position_2012_PD_03.jpg&ehk=cvp1qpwQG6mU6QAIOW%2fzB%2f%2bkilm7%2bntmfL0trqPcqrs%3d&risl=1&pid=ImgRaw&r=0" class="w-full rounded" alt="Chess Board"/>
+      <h2 class="text-xl font-semibold mt-2">Chess Board</h2>
+      <p class="text-gray-600">$78.99</p>
+      <button onclick="addToCart(4, 'Chess Board', 78.99)" class="mt-2 bg-green-600 text-white px-4 py-2 rounded w-full">Add to Cart</button>
+    </div>
+
+	<!-- Product 1 -->
+    <div class="bg-white p-4 rounded shadow" data-id="1">
+      <img src="https://i0.wp.com/crookedcue.ca/wp-content/uploads/2021/03/new_adobeStock_29313384.jpg?fit=546%2C364&ssl=1" class="w-full rounded" alt="Pool Table"/>
+      <h2 class="text-xl font-semibold mt-2">Pool Table</h2>
+      <p class="text-gray-600">$82.99</p>
+      <button onclick="addToCart(1, 'Pool Table', 82.99)" class="mt-2 bg-green-600 text-white px-4 py-2 rounded w-full">Add to Cart</button>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="bg-white p-4 rounded shadow" data-id="2">
+      <img src="https://img.shopstyle-cdn.com/sim/9f/73/9f7349b8bbf92c2f9f86bcd839961129_best/odizli-swimming-costume-women-long-sleeve-short-sleeve-floral-zip-up-one-piece-boyleg-swimsuit-ladies-muslim-full-body-burkini-modest-swimwear-neoprene-rash-guard-surf-bathing-wet-suits-wetsuit-black-.jpg" class="w-full rounded" alt="Swimming Costume"/>
+      <h2 class="text-xl font-semibold mt-2">Swimming Costume</h2>
+      <p class="text-gray-600">$54.99</p>
+      <button onclick="addToCart(2, 'Swimming Costume', 54.99)" class="mt-2 bg-green-600 text-white px-4 py-2 rounded w-full">Add to Cart</button>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="bg-white p-4 rounded shadow" data-id="3">
+      <img src="https://m.media-amazon.com/images/I/61QfFyXU3RL._AC_SL1500_.jpg" class="w-full rounded" alt="Swimming Cap"/>
+      <h2 class="text-xl font-semibold mt-2">Swimming Cap</h2>
+      <p class="text-gray-600">$29.99</p>
+      <button onclick="addToCart(3, 'Swimming Cap', 29.99)" class="mt-2 bg-green-600 text-white px-4 py-2 rounded w-full">Add to Cart</button>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="bg-white p-4 rounded shadow" data-id="4">
+      <img src="https://th.bing.com/th/id/OIP.67WdgyFNwIUsStio0EB9twHaHa?rs=1&pid=ImgDetMain" class="w-full rounded" alt="Swimming Goggles"/>
+      <h2 class="text-xl font-semibold mt-2">Swimming Goggles</h2>
+      <p class="text-gray-600">$78.99</p>
+      <button onclick="addToCart(4, 'Swimming Goggles', 78.99)" class="mt-2 bg-green-600 text-white px-4 py-2 rounded w-full">Add to Cart</button>
+    </div>
+
+	<!-- Product 1 -->
+    <div class="bg-white p-4 rounded shadow" data-id="1">
+      <img src="https://www.lifefitness.com.au/wp-content/uploads/2024/01/Aspire_Tread_Perspective_BLK_SE4-16-inch_mr-scaled.jpg" class="w-full rounded" alt="Treadmill"/>
+      <h2 class="text-xl font-semibold mt-2">Treadmill</h2>
+      <p class="text-gray-600">$64.99</p>
+      <button onclick="addToCart(1, 'Treadmill', 64.99)" class="mt-2 bg-green-600 text-white px-4 py-2 rounded w-full">Add to Cart</button>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="bg-white p-4 rounded shadow" data-id="2">
+      <img src="https://th.bing.com/th/id/R.45e7c1d4a94c86eb8261b12596f0ddbe?rik=2k3AJhYMduUIWQ&riu=http%3a%2f%2fg-ecx.images-amazon.com%2fimages%2fG%2f01%2faplusautomation%2fvendorimages%2fa3d67ab4-79f0-4731-95fe-f8b6c850ea26._CB292503836_.jpg&ehk=vkWbaqbVSrwyiFSpeJW4xXMKYyuAmqC8Jo%2fWy54mHFk%3d&risl=&pid=ImgRaw&r=0" class="w-full rounded" alt="Dumbells Set"/>
+      <h2 class="text-xl font-semibold mt-2">Dumbells Set</h2>
+      <p class="text-gray-600">$35.99</p>
+      <button onclick="addToCart(2, 'Dumbells Set', 35.99)" class="mt-2 bg-green-600 text-white px-4 py-2 rounded w-full">Add to Cart</button>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="bg-white p-4 rounded shadow" data-id="3">
+      <img src="https://befitnesshub.com/wp-content/uploads/2021/04/Bodycraft-F660-Leg-Press.jpg" class="w-full rounded" alt="Leg Press Machine"/>
+      <h2 class="text-xl font-semibold mt-2">Leg Press Machine</h2>
+      <p class="text-gray-600">$65.99</p>
+      <button onclick="addToCart(3, 'Leg Press Machine', 65.99)" class="mt-2 bg-green-600 text-white px-4 py-2 rounded w-full">Add to Cart</button>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="bg-white p-4 rounded shadow" data-id="4">
+      <img src="https://www.goonproducts.com/wp-content/uploads/2020/10/10.-MaxKare-Dip-Power-Tower-Workout-Stand-Pull-Up-Workout-Station-Bar.jpg" class="w-full rounded" alt="Pull-Up Bar"/>
+      <h2 class="text-xl font-semibold mt-2">Pull-Up Bar</h2>
+      <p class="text-gray-600">$89.99</p>
+      <button onclick="addToCart(4, 'Pull-Up Bar', 89.99)" class="mt-2 bg-green-600 text-white px-4 py-2 rounded w-full">Add to Cart</button>
+    </div>
+	
+    <!-- Add more products here -->
+  </main>
+
+  <!-- Cart Section (hidden by default) -->
+  <div id="cart-panel" class="fixed right-4 top-20 w-80 bg-white border shadow-lg p-4 rounded hidden z-50">
+    <h3 class="text-lg font-bold mb-2">Your Cart</h3>
+    <ul id="cart-items" class="space-y-2"></ul>
+    <p class="mt-4 font-semibold">Total: $<span id="cart-total">0.00</span></p>
+    <a href="sports back.html" class="block mt-4 text-center bg-blue-600 text-white px-4 py-2 rounded">Proceed to Payment</a>
+  </div>
+
+  <script>
+    const cart = [];
+    function addToCart(id, name, price) {
+      const existing = cart.find(item => item.id === id);
+      if (existing) {
+        existing.qty += 1;
+      } else {
+        cart.push({ id, name, price, qty: 1 });
+      }
+      updateCartUI();
+    }
+
+    function updateCartUI() {
+      const cartItems = document.getElementById("cart-items");
+      const cartTotal = document.getElementById("cart-total");
+      const cartCount = document.getElementById("cart-count");
+
+      cartItems.innerHTML = '';
+      let total = 0;
+      let count = 0;
+
+      cart.forEach(item => {
+        const li = document.createElement("li");
+        li.innerHTML = `${item.name} x${item.qty} - $${(item.price * item.qty).toFixed(2)}`;
+        cartItems.appendChild(li);
+        total += item.price * item.qty;
+        count += item.qty;
+      });
+
+      cartTotal.textContent = total.toFixed(2);
+      cartCount.textContent = count;
+    }
+
+    function toggleCart() {
+      const panel = document.getElementById("cart-panel");
+      panel.classList.toggle("hidden");
+    }
+  </script>
+
+</body>
+</html>
+

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sports Shop</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+  /* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Style for the navigation container */
+nav {
+  display: flex;
+  justify-content: center; /* Center the items horizontally */
+  align-items: center; /* Vertically center the items */
+  background-color: #f8f9fa; /* Light background color */
+  padding: 10px 0; /* Padding around the nav */
+}
+
+/* Style for each anchor tag in the nav */
+nav a {
+  text-decoration: none; /* Remove the underline from links */
+  font-size: 16px; /* Set a font size */
+  font-weight: 600; /* Make the text bold */
+  color: #007bff; /* Blue color for the links */
+  transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+/* Add space between links */
+nav a:not(:last-child) {
+  margin-right: 20px; /* Adds space between the links */
+}
+
+/* Hover effect on links */
+nav a:hover {
+  color: #0056b3; /* Darker blue when hovered */
+}
+
+/* Optional: Add focus styles for accessibility */
+nav a:focus {
+  outline: 2px solid #0056b3; /* Blue outline on focus */
+}
+
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Header Section -->
+  <header class="bg-white shadow p-4 flex justify-between items-center">
+    <h1 class="text-2xl font-bold text-blue-600">🏀 Sports Shop</h1>
+    <nav class="space-x-4">
+      <a href="new 1.html" class="text-blue-600">Home</a>
+      <a href="sports.html" class="text-blue-600">Shop</a>
+      <a href="new 2.html" class="text-blue-600">About</a>
+      <a href="new 3.html" class="text-blue-600">Contact</a>
+    </nav>
+    <div class="relative">
+      <button onclick="toggleCart()" class="text-sm bg-blue-600 text-white px-4 py-2 rounded">
+        Cart (<span id="cart-count">0</span>)
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="bg-blue-600 text-white p-12 text-center">
+    <h2 class="text-4xl font-bold mb-4">Welcome to Sports Shop!</h2>
+    <p class="text-xl mb-4">Explore our wide range of sports products for all your athletic needs.</p>
+    <a href="#products" class="bg-green-600 text-white px-6 py-3 rounded text-lg">Shop Now</a>
+  </section>
+
+  <!-- Featured Products Section -->
+  <section id="products" class="p-6">
+    <h2 class="text-3xl font-bold text-center mb-6">Featured Products</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <!-- Example of a single product -->
+      <div class="bg-white p-4 rounded shadow" data-id="1">
+        <img src="https://th.bing.com/th/id/OIP.hYtDYVTcfFMbUl1BR6dwzQHaE6?w=280&h=186&c=7&r=0&o=5&dpr=1.5&pid=1.7" class="w-full rounded" alt="Running Shoes"/>
+        <h2 class="text-xl font-semibold mt-2">Football</h2>
+        <p class="text-gray-600">$79.99</p>
+        <button onclick="addToCart(1, 'Football', 79.99)" class="mt-2 bg-green-600 text-white px-4 py-2 rounded w-full">Add to Cart</button>
+      </div>
+
+      <!-- Add more products here -->
+      <!-- Product 2 -->
+      <div class="bg-white p-4 rounded shadow" data-id="2">
+        <img src="https://cdna.lystit.com/photos/macys/2470266e/mitchell-ness-Blue-Emmitt-Smith-Dallas-Cowboys-Authentic-Football-Jersey.jpeg" class="w-full rounded" alt="Football Jersey"/>
+        <h2 class="text-xl font-semibold mt-2">Football Jersey</h2>
+        <p class="text-gray-600">$49.99</p>
+        <button onclick="addToCart(2, 'Football Jersey', 49.99)" class="mt-2 bg-green-600 text-white px-4 py-2 rounded w-full">Add to Cart</button>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="bg-white p-4 rounded shadow" data-id="3">
+        <img src="https://i5.walmartimages.com/asr/8e33eda3-8982-4c51-9993-cffea55b31b7_3.cba592caf4424c5f68ead86773ca5612.png" class="w-full rounded" alt="Basketball"/>
+        <h2 class="text-xl font-semibold mt-2">Basketball</h2>
+        <p class="text-gray-600">$29.99</p>
+        <button onclick="addToCart(3, 'Basketball', 29.99)" class="mt-2 bg-green-600 text-white px-4 py-2 rounded w-full">Add to Cart</button>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="bg-white p-4 rounded shadow" data-id="4">
+        <img src="https://th.bing.com/th/id/OIP.Qx5dtOsjtDPUqwTxalOhVAAAAA?rs=1&pid=ImgDetMain" class="w-full rounded" alt="Tennis Racket"/>
+        <h2 class="text-xl font-semibold mt-2">Tennis Racket</h2>
+        <p class="text-gray-600">$89.99</p>
+        <button onclick="addToCart(4, 'Tennis Racket', 89.99)" class="mt-2 bg-green-600 text-white px-4 py-2 rounded w-full">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="bg-gray-200 p-12 text-center">
+    <h2 class="text-3xl font-bold mb-4">About Us</h2>
+    <p class="text-lg">We are your go-to destination for all sports equipment and gear. Whether you're a professional athlete or just getting started, we have everything you need to stay active and perform at your best!</p>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="bg-gray-800 text-white p-4 text-center">
+    <p>&copy; 2025 Sports Shop. All rights reserved
+
+  </body>
+  </html>

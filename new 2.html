@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us - Sports Shop</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+  /* Basic Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Style for the navigation container */
+  nav {
+    display: flex;
+    justify-content: center; /* Center the items horizontally */
+    align-items: center; /* Vertically center the items */
+    background-color: #f8f9fa; /* Light background color */
+    padding: 10px 0; /* Padding around the nav */
+  }
+
+  /* Style for each anchor tag in the nav */
+  nav a {
+    text-decoration: none; /* Remove the underline from links */
+    font-size: 16px; /* Set a font size */
+    font-weight: 600; /* Make the text bold */
+    color: #007bff; /* Blue color for the links */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+  }
+
+  /* Add space between links */
+  nav a:not(:last-child) {
+    margin-right: 20px; /* Adds space between the links */
+  }
+
+  /* Hover effect on links */
+  nav a:hover {
+    color: #0056b3; /* Darker blue when hovered */
+  }
+
+  /* Optional: Add focus styles for accessibility */
+  nav a:focus {
+    outline: 2px solid #0056b3; /* Blue outline on focus */
+  }
+
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Header Section -->
+  <header class="bg-white shadow p-4 flex justify-between items-center">
+    <h1 class="text-2xl font-bold text-blue-600">🏀 Sports Shop</h1>
+    <nav class="space-x-4">
+      <a href="new 1.html" class="text-blue-600">Home</a>
+      <a href="sports.html" class="text-blue-600">Shop</a>
+      <a href="new 2.html" class="text-blue-600">About</a>
+      <a href="new 3.html" class="text-blue-600">Contact</a>
+    </nav>
+    <div class="relative">
+      <button onclick="toggleCart()" class="text-sm bg-blue-600 text-white px-4 py-2 rounded">
+        Cart (<span id="cart-count">0</span>)
+      </button>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section class="bg-gray-200 p-12 text-center">
+    <h2 class="text-3xl font-bold mb-4">About Us</h2>
+    <p class="text-lg mb-6">We are a passionate team of sports enthusiasts dedicated to bringing you the best sports equipment and gear. Whether you're a professional athlete or just starting your fitness journey, we provide high-quality products for all levels and ages.</p>
+    <h3 class="text-2xl font-semibold mb-4">Our Mission</h3>
+    <p class="text-lg mb-6">Our mission is to inspire and support athletes of all kinds by offering a wide range of products designed to help you perform at your best. We believe in the power of sport to bring people together, challenge limits, and create lifelong memories.</p>
+    <h3 class="text-2xl font-semibold mb-4">Why Choose Us?</h3>
+    <ul class="text-lg list-inside list-disc text-left mb-6">
+      <li>High-quality products from trusted brands.</li>
+      <li>Fast and reliable shipping.</li>
+      <li>Expert advice and product recommendations.</li>
+      <li>Excellent customer service, always here to help!</li>
+    </ul>
+    <h3 class="text-2xl font-semibold mb-4">Our Vision</h3>
+    <p class="text-lg">We strive to become the leading provider of sports equipment, supporting athletes at every level of their journey, from beginners to pros. We envision a world where sports bring people closer, help them live healthier lives, and allow them to push beyond their limits.</p>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="bg-gray-800 text-white p-4 text-center">
+    <p>&copy; 2025 Sports Shop. All rights reserved</p>
+  </footer>
+  
+</body>
+</html>
